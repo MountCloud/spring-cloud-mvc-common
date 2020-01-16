@@ -13,8 +13,7 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 /**
  * @author zhanghaishan
  * @version V1.0
- * org.mountcloud.mvc.common.handler
- * TODO:
+ * TODO: 这个就是扩展mapping注册的类
  * 2020年1月6日.
  */
 public class ControllerApiRequestMappingHandlerMapping extends RequestMappingHandlerMapping {
@@ -28,6 +27,12 @@ public class ControllerApiRequestMappingHandlerMapping extends RequestMappingHan
 		this.logMappingPath = logMappingPath;
 	}
 
+	/**
+	 * 提供mappinginfo，这里提供的mappinginfo就是最终注册的mapping
+	 * @param method 是哪个方法前来注册
+	 * @param handlerType 是哪个类前来注册
+	 * @return 注册结果
+	 */
 	@Override
 	protected RequestMappingInfo getMappingForMethod(Method method, Class<?> handlerType) {
 		RequestMappingInfo mappingInfo = super.getMappingForMethod(method, handlerType);
@@ -38,9 +43,9 @@ public class ControllerApiRequestMappingHandlerMapping extends RequestMappingHan
 	
 	/**
 	 * 添加夫类的mapping
-	 * @param handlerType
-	 * @param mappingInfo
-	 * @return
+	 * @param handlerType 注册的类
+	 * @param mappingInfo mappinginfo
+	 * @return 结果
 	 */
 	protected RequestMappingInfo appendParentRequestMapping(Class<?> handlerType,RequestMappingInfo mappingInfo) {
 		if(mappingInfo==null) {
@@ -78,8 +83,8 @@ public class ControllerApiRequestMappingHandlerMapping extends RequestMappingHan
 	
 	/**
 	 * 根据class来获取path
-	 * @param classes
-	 * @return
+	 * @param classes class列表
+	 * @return 路径
 	 */
 	private List<String> getRequestMappingValues(Class<?> ...classes) {
 		List<String> results = new ArrayList<String>();
@@ -95,7 +100,7 @@ public class ControllerApiRequestMappingHandlerMapping extends RequestMappingHan
 	
 	/**
 	 * 由于spring boot2不打印mapping了，不习惯，就自己打印一下，但是有些系统mapping也不打印，有空再研究怎么打印
-	 * @param info
+	 * @param info mapinginfo
 	 */
 	private void logMapping(RequestMappingInfo info) {
 		if(!logMappingPath||info==null) {

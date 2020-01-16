@@ -13,8 +13,7 @@ import java.util.HashMap;
 /**
  * @author zhanghaishan
  * @version V1.0
- * @Package com.ugirls.graphql.util
- * @Description: TODO
+ * @Description: TODO 请求工具
  * @date 2018/2/8.
  */
 public class RequestUtil {
@@ -23,8 +22,8 @@ public class RequestUtil {
 
     /**
      * 把头打印出来
-     * @param logger
-     * @param request
+     * @param logger 日志
+     * @param request 请求
      */
     public static void printHeads(Logger logger, HttpServletRequest request) {
 
@@ -42,7 +41,7 @@ public class RequestUtil {
 
     /**
      * 内容URL加密
-     * @param content
+     * @param content 内容
      * @return
      */
     public static String urlEncode(String content){
@@ -57,8 +56,8 @@ public class RequestUtil {
 
     /***
      * 把request里的请求封装为map
-     * @param request
-     * @return
+     * @param request 请求
+     * @return 结果
      */
     public static HashMap<String, String> getRequestContent(HttpServletRequest request) {
         HashMap<String, String> content = new HashMap<String, String>();
@@ -82,9 +81,9 @@ public class RequestUtil {
     }
 
     /**
-     * 获取客户端的IP地址
-     * @param request
-     * @return
+     * 获取客户端的IP地址，主要是用于获取x-forwarded-for
+     * @param request 请求
+     * @return 结果
      */
     public static String getRemoteIp(HttpServletRequest request){
         String remoteIp ="";
@@ -92,7 +91,7 @@ public class RequestUtil {
         if(ip != null) {
             remoteIp = ip;
         }else {
-            remoteIp = "127.0.0.1";
+            remoteIp = "";
         }
         return remoteIp;
     }

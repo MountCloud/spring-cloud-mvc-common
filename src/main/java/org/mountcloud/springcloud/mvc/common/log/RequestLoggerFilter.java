@@ -28,6 +28,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 
+/**
+  * @author zhanghaishan
+  * @version V1.0
+  *
+  * TODO: 日志filter，用于打印所有的请求日志，可以通过配置进行关闭
+  * 2020/1/17.
+  */
 @Component
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class RequestLoggerFilter implements Filter {
@@ -39,12 +46,24 @@ public class RequestLoggerFilter implements Filter {
 	private final static Logger log = LoggerFactory.getLogger(RequestLoggerFilter.class);
 
 
-
+	/**
+	 * 初始化
+	 * @param filterConfig 配置
+	 * @throws ServletException 异常
+	 */
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
 
 	}
 
+	/**
+	 * 打印日志
+	 * @param req 请求
+	 * @param resp 响应
+	 * @param chain 下一个filter
+	 * @throws IOException ex
+	 * @throws ServletException ex
+	 */
 	@Override
 	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain)
 			throws IOException, ServletException {

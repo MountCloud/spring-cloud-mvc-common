@@ -7,6 +7,9 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.UUID;
 
+/**
+ * 请求日志
+ */
 public class RequestLogger {
 
 	@Override

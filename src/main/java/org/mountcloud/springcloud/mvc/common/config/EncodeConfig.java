@@ -8,13 +8,16 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 /**
  * @author zhanghaishan
  * @version V1.0
- * org.mountcloud.mvc.common.config
- * TODO:
+ * TODO: 加密配置
  * 2020年1月6日.
  */
 @Configuration
 public class EncodeConfig {
-	
+
+	/**
+	 * 密码加密器
+	 * @return 密码加密器
+	 */
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();

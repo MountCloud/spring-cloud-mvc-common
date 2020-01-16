@@ -10,9 +10,8 @@ import org.springframework.stereotype.Component;
 /**
  * @author zhanghaishan
  * @version V1.0
- * @Package com.ugirls.graphql.config
- * @Description: TODO
- * @date 2018/3/16.
+ * TODO: ApplicationContext的config，主要是用于获取ApplicationContext
+ * 2018/3/16.
  */
 @Component
 public class ApplicationContextConfig implements ApplicationContextAware {
@@ -34,14 +33,28 @@ public class ApplicationContextConfig implements ApplicationContextAware {
         }
     }
 
+    /**
+     * 获取ApplicationContext
+     * @return ApplicationContext
+     */
     public static ApplicationContext getApplicationContext(){
         return applicationContextOnece;
     }
-    
+
+    /**
+     * 获取自己的单例
+     * @return 单例
+     */
     public static ApplicationContextConfig getInstance() {
     	return applicationContextConfig;
     }
 
+    /**
+     * 根据类型获取bean，空不报错
+     * @param cls class
+     * @param <T> 类型
+     * @return bean
+     */
     public static <T> T getBean(Class<T> cls){
         T result = null;
         try{
@@ -51,6 +64,13 @@ public class ApplicationContextConfig implements ApplicationContextAware {
         return result;
     }
 
+    /**
+     * 根据名字类型获取bean
+     * @param name 名字
+     * @param cls class
+     * @param <T> 类型
+     * @return bean
+     */
     public static <T> T getBean(String name,Class<T> cls){
         T result = null;
         try{
