@@ -13,7 +13,7 @@ import java.util.HashMap;
 /**
  * @author zhanghaishan
  * @version V1.0
- * @Description: TODO 请求工具
+ * TODO 请求工具
  * @date 2018/2/8.
  */
 public class RequestUtil {
@@ -69,14 +69,6 @@ public class RequestUtil {
             content.put(thisName, thisValue);
         }
 
-        /**
-         rnames = request.getAttributeNames();
-         for (Enumeration<String> e = rnames; e.hasMoreElements();) {
-         String thisName = e.nextElement().toString();
-         String thisValue = request.getAttribute(thisName).toString();
-         content.put(thisName, thisValue);
-         }
-         **/
         return content;
     }
 

@@ -1,15 +1,18 @@
 package org.mountcloud.springcloud.mvc.common.log;
 
 import org.mountcloud.springproject.common.util.GsonUtil;
-import org.springframework.stereotype.Component;
 
 import java.util.Calendar;
 import java.util.Date;
 import java.util.UUID;
 
 /**
- * 请求日志
- */
+  * @author zhanghaishan
+  * @version V1.0
+  *
+  * TODO: 请求的日志类
+  * 2020/1/17.
+  */
 public class RequestLogger {
 
 	@Override
@@ -26,6 +29,8 @@ public class RequestLogger {
 	 * @param request   request消息体的内容，如果是GET的话，就写GET
 	 * @param response  返回的消息体的内容
 	 * @param timeSpent 本次访问的消耗时间
+	 * @param caller 调用者
+	 * @param httpCode  httpcode
 	 */
 	public RequestLogger(String name, String method, String url, Object request, Object response, long timeSpent,
 			String caller, String httpCode) {
