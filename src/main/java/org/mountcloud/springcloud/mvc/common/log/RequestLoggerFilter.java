@@ -150,7 +150,7 @@ public class RequestLoggerFilter implements Filter {
 						requestLogger = new RequestLogger("FirstFilter-Log",request.getMethod(),request.getRequestURI(),requestCotnent,responseContent,end-start,ip,StringUtil.toString(response.getStatus()));
 					}
 					
-					LoggerUtil.getLogger(RequestLoggerFilter.class).info(this.toString());
+					LoggerUtil.getLogger(RequestLoggerFilter.class).info(requestLogger.toString());
 					
 					Map<String, RequestLoggerOperate> operates = ApplicationContextConfig.getApplicationContext().getBeansOfType(RequestLoggerOperate.class);
 					if(operates!=null&&operates.size()>0) {
