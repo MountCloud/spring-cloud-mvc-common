@@ -1,7 +1,6 @@
 package org.mountcloud.springcloud.mvc.common.log;
 
-import org.mountcloud.cfgver.common.util.GsonUtil;
-import org.mountcloud.cfgver.common.util.LoggerUtil;
+import org.mountcloud.springproject.common.util.GsonUtil;
 import org.springframework.stereotype.Component;
 
 import java.util.Calendar;

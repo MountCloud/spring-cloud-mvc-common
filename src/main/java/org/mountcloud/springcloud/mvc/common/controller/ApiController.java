@@ -1,8 +1,8 @@
 package org.mountcloud.springcloud.mvc.common.controller;
 
-import org.mountcloud.cfgver.common.entity.BaseEntity;
 import org.mountcloud.springcloud.mvc.common.config.APIConfig;
 import org.mountcloud.springcloud.mvc.common.service.BaseService;
+import org.mountcloud.springproject.common.entity.BaseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**

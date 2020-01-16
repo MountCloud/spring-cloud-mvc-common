@@ -1,8 +1,9 @@
 package org.mountcloud.springcloud.mvc.common.service;
 
+import org.mountcloud.springproject.common.entity.BaseEntity;
+
 import java.util.List;
 
-import org.mountcloud.cfgver.common.entity.BaseEntity;
 
 /**
  * 夫service

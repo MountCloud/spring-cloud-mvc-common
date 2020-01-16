@@ -1,9 +1,9 @@
 package org.mountcloud.springcloud.mvc.common;
 
 import org.junit.Test;
-import org.mountcloud.cfgver.common.util.GsonUtil;
 import org.mountcloud.springcloud.mvc.common.controller.ApiController;
 import org.mountcloud.springcloud.mvc.common.controller.ApiControllerInterface;
+import org.mountcloud.springproject.common.util.GsonUtil;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**

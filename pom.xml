@@ -12,7 +12,7 @@
 	<artifactId>spring-cloud-mvc-common</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
-	<name>spring-mvc-common</name>
+	<name>spring-cloud-mvc-common</name>
 	<url>http://maven.apache.org</url>
 
 	<dependencies>
