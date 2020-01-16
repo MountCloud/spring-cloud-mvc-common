@@ -12,6 +12,7 @@
 	<artifactId>spring-cloud-mvc-common</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
+	<description>This project contains the necessary components of the spring boot mvc project and the necessary constraints of the mvc.</description>
 
 	<!-- jar包名字 -->
 	<name>${project.groupId}:${project.artifactId}</name>
