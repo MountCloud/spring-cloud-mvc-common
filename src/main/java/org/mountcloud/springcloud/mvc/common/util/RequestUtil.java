@@ -14,7 +14,7 @@ import java.util.HashMap;
  * @author zhanghaishan
  * @version V1.0
  * TODO 请求工具
- * @date 2018/2/8.
+ * 2018/2/8.
  */
 public class RequestUtil {
 
@@ -42,7 +42,7 @@ public class RequestUtil {
     /**
      * 内容URL加密
      * @param content 内容
-     * @return
+     * @return 结果
      */
     public static String urlEncode(String content){
         String resutl = content;
