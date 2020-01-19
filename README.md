@@ -1,23 +1,23 @@
 # USE 使用
 ##  USE spring cloud common ，使用spring cloud common方式
 ```
-	<parent>
-		<groupId>org.mountcloud</groupId>
-		<artifactId>spring-cloud-common-parent</artifactId>
-		<version>2.2.1.RELEASE-Hoxton.RELEASE-1.1</version>
-	</parent>
-	<dependency>
-		<groupId>org.mountcloud</groupId>
-		<artifactId>spring-cloud-mvc-common</artifactId>
-	</dependency>
+<parent>
+  <groupId>org.mountcloud</groupId>
+  <artifactId>spring-cloud-common-parent</artifactId>
+  <version>2.2.1.RELEASE-Hoxton.RELEASE-1.1</version>
+</parent>
+<dependency>
+  <groupId>org.mountcloud</groupId>
+  <artifactId>spring-cloud-mvc-common</artifactId>
+</dependency>
 ```
 ## OR Use alone，或者单独引用。
 ```
-	<dependency>
-		<groupId>org.mountcloud</groupId>
-		<artifactId>spring-cloud-mvc-common</artifactId>
-    <version>1.1</version>
-	</dependency>
+<dependency>
+  <groupId>org.mountcloud</groupId>
+  <artifactId>spring-cloud-mvc-common</artifactId>
+  <version>1.1</version>
+</dependency>
 ```
 
 # Note
